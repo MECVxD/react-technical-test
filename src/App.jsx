@@ -1,17 +1,16 @@
-import { useCatImage } from "./hooks/useCatImage"
-import { useCatFact } from "./hooks/useCatFact"
+import { useCatImage } from './hooks/useCatImage'
+import { useCatFact } from './hooks/useCatFact'
 import './App.css'
-import { Otro } from "./components/otro"
 
-export function App() {
-  const {fact, refreshFact} = useCatFact()
-  const {imageUrl} = useCatImage({fact})
+export function App () {
+  const { fact, refreshFact } = useCatFact()
+  const { imageUrl } = useCatImage({ fact })
 
   const handleClick = async () => {
     refreshFact()
   }
 
-  return(
+  return (
     <main>
       <h1>App de Gatitos</h1>
       {/* <section>
